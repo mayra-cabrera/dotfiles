@@ -1,0 +1,24 @@
+[user]
+	name = Mayra Cabrera
+	email = mcabrera1087@gmail.com
+[color]
+	ui = auto
+[credential]
+	helper = cache --timeout=3600
+[core]
+	editor = mvim -v
+[alias]
+	sla = log --oneline --decorate --graph --all
+  glag = log -E -i --grep
+  uncommit = reset --soft HEAD^
+  unstage = reset
+	car = commit --amend --no-edit
+	aliases = config --get-regexp alias
+	upstream = rev-parse --abbrev-ref --symbolic-full-name @{upstream}
+	wip = commit -am 'WIP'
+	next-commit = !git checkout $(git log --reverse --ancestry-path --pretty=%H HEAD..master | head -1)
+[github]
+  user = mayra-cabrera
+[help]
+	autocorrect = 100
+
